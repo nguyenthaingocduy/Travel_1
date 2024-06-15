@@ -1,6 +1,8 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1, 400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 :root{
     --main-color: #6DBFE2;
+    --subtext : "Open Sans", sans-serif;
 }
 
 *{
@@ -197,6 +199,7 @@ form button:hover {
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
+    outline: none;
     transition: all .5s ease;
 }
 .nice-place-text button:hover {
@@ -229,4 +232,259 @@ form button:hover {
     left: 50%;
     transform: translateX(-50%);
     bottom: -10px;
+}
+/* About */
+
+.about {
+    padding: 100px 0;
+}
+.about h1 {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+.about h1::before {
+    position: absolute;
+    content:"";
+    height: 5px;
+    width: 150px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50% );
+    bottom: -10px;
+    border-radius: 5px;
+
+}
+.about h1:after {
+    position: absolute;
+    content:"\2665";
+    color: red;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 20px;
+    background: #fff;
+}
+.about-content-left {
+    width: 50%;
+}
+.about-content-left img {
+    width: 100%;
+}
+.about-content-right {
+    width: 50%;
+    padding-left: 50px;
+}
+.about-content-right h2 {
+    font-family: var(--subtext);
+    font-weight: normal;
+    color: var(--main-color);
+}
+.about-content-right p {
+    font-size:18px;
+    margin: 20px 0;
+    font-family: var(--subtext);
+}
+
+.about-content-right button {
+   outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: var(--main-color);
+    height: 40px;
+    padding: 2px 20px;
+}
+.about-content-right button:hover {
+    transition: all .3s ease;
+    background-color: #fff;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+/* Service */
+.service {
+    padding: 100px 0;
+}
+.service-item {
+    width: 30%;
+    background-color: #b6dcec;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+    }
+.service-item img {
+    width: 150px;
+    margin-bottom: 6px;
+    height: auto;
+    
+}
+.service-item:hover {
+    box-shadow: 2px 2px 10px black;
+}
+.service-item p {
+    text-align: center;
+    font-family: var(--subtext);
+    font-weight: bold;
+}
+.item-third img {
+    width: 100%;
+}
+/* Discover about tours */
+.discover_about_tours {
+    padding: 100px 0;
+}
+.discover_about_tours h1 {
+    color: var(--main-color);
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+.discover_about_tours h1::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    background-color: var(--main-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+.discover_about_tours h1::after {
+    position: absolute;
+    content: "\2665";
+    color: red;
+    background-color: #fff;
+    width: 40px;
+    height: 20px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.tour-content-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.tour-content-left {
+    width: 50%;
+    height: 300px;
+    margin-bottom: 12px;
+}
+.tour-content-left img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.tour-content-right {
+    width: 50%;
+    padding: 20px 0 0 50px;
+}
+.tour-content-right h2 {
+    font-family: var(--subtext);
+    font-weight: normal;
+    color: var(--main-color);
+}
+.tour-content-right p {
+    font-family: var(--subtext);
+    margin: 20px 0;
+    font-size: 18px;
+   
+}
+.tour-content-right button {
+    height: 30px;
+    width: 100px;
+    background-color: var(--main-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: all .5s ease;
+}
+.tour-content-right button:hover {
+    background-color: tomato;
+}
+.tour-content-item {
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    margin-bottom: 12px;
+}
+/* Review */
+.review {
+    padding: 100px 0;
+}
+.review h1 {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+.review h1::before{
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+.review h1::after {
+    position: absolute;
+    content: "\2665";
+    color: red;
+    background-color: #fff;
+    width: 40px;
+    height: 20px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+.review-item {
+    width: 30%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 12px;
+    transition: all .5s ease;
+}
+.review-item:hover {
+    box-shadow: 2px 2px 10px var(--main-color);
+}
+.review-item:hover .review-item-text img {
+    transform: translateY(-10px);
+}
+.review-item-text {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #dddd;
+}
+.review-item-text p {
+    font-size:16px;
+    font-family: var(--subtext);
+    margin: 20px 0;
+}
+.review-item-text span {
+    color:var(--main-color);
+}
+.review-item-text img {
+    width: 50px;
+    transition: all .5s ease;
+}
+.review-item-img {
+    padding: 12px;
+}
+.review-item-img h2 {
+    font-family: var(--subtext);
+    color: var(--main-color);
+    font-size: 16px;
+}
+.review-item-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.review-item-img-text {
+    width: 70%;
 }
