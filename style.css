@@ -609,9 +609,66 @@ form button:hover {
     border-radius: 5px;
     outline: none;
     transition: all .5s ease;
- 
+    margin-top: 20px;
+  
 }
 .contact-content-bottom button:hover {
     background-color: tomato;
 
+}
+
+/* responsive */
+@media (max-width: 575px) {
+    .header-content {
+        width: 100%;
+    }
+    .nice-place {
+        padding: 50px 0;
+    }
+    .nice-place-item {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 12px;
+    }
+    .about {
+        padding: 50px 0;
+
+    }
+    .about-content-left {
+        width: 100%;
+    }
+    .about-content-right {
+        padding: 0 12px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .service-item {
+        width: 100%;
+        margin-bottom: 20px;
+        margin: 13px;
+    }
+    .discover_about_tours {
+        padding: 50px 0;
+    }
+    .tour-content-left {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+    .tour-content-right {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+    .review {
+        padding: 50px 0;
+    }
+    .review-item {
+        width: 100%;
+        margin-bottom: 20px;
+        margin: 13px;
+    }
+    .contact-content-item {
+        width: 100%;
+    }
 }
