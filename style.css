@@ -488,3 +488,130 @@ form button:hover {
 .review-item-img-text {
     width: 70%;
 }
+/* Sign up */
+.sign-up {
+    padding:50px 0;
+}
+.sign-up h1 {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+.sign-up h1::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+.sign-up h1::after {
+    position: absolute;
+    content: "\2665";
+    color: red;
+    background-color: #fff;
+    width: 40px;
+    height: 20px;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.signup-content {
+    background-color: #b6dcec;
+    padding: 30px 0;
+    align-items: center;
+    text-align:center;
+}
+.signup-content input {
+    height: 35px;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.signup-content button {
+    height: 40px;
+    width: 100px;
+    background-color: var(--main-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: all .5s ease;
+}
+.signup-content button:hover {
+    background-color: tomato;
+}
+/* Contact */
+
+.contact {
+    padding: 50px 0;
+}
+.contact h1 {
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+.contact h1:before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+.contact h1::after {
+    position: absolute;
+    content: "\2665";
+    color: red;
+    background-color: #fff;
+    width: 40px;
+    height: 20px;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact-content-item {
+    width: 50%;
+    padding: 6px 12px;
+}
+.contact-content-item input {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 3px;
+}
+.contact-content-bottom {
+    padding: 6px 0px;
+    text-align: center;
+}
+.contact-content-bottom textarea {
+    height: 100px;
+    width: 100%;
+    background-color: #dddddd;
+    outline: none;
+    border: none;
+ 
+    
+}
+.contact-content-bottom button {
+    height: 40px;
+    width: 100px;
+    background-color: var(--main-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: all .5s ease;
+ 
+}
+.contact-content-bottom button:hover {
+    background-color: tomato;
+
+}
