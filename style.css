@@ -616,6 +616,38 @@ form button:hover {
     background-color: tomato;
 
 }
+footer {
+    padding: 50px 10px 50px 30px;
+    background-color: var(--main-color);
+
+}
+.footer-content-middle {
+    
+}
+.footer-content-item h1 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: var(--subtext);
+}
+.footer-contact-item {
+    display: inline-flex;
+}
+.footer-contact-item i {
+    padding-right: 12px;
+    margin-bottom: 15px;
+}
+.footer-content-left {
+    width: 30%;
+}
+.footer-content-middle {
+    width: 30%;
+}
+.footer-content-right {
+    width: 30%;
+}
+.message {
+
+}
 
 /* responsive */
 @media (max-width: 575px) {
@@ -671,4 +703,14 @@ form button:hover {
     .contact-content-item {
         width: 100%;
     }
+    .footer-content-left {
+        width: 100%;
+    }
+    .footer-content-middle {
+        width: 100%;
+    }
+    .footer-content-right {
+        width: 100%;
+    }
 }
+
