@@ -629,6 +629,8 @@ footer {
     font-weight: 500;
     font-family: var(--subtext);
 }
+
+
 .footer-contact-item {
     display: inline-flex;
 }
@@ -644,6 +646,24 @@ footer {
 }
 .footer-content-right {
     width: 30%;
+}
+.horizontal{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #dddd;
+    margin-bottom: 20px;
+}
+.footer-contact-item-bottom a {
+    text-decoration: none;
+    color: #000;
+    transition: all .3s ease;;
+}
+.footer-contact-item-bottom a::before {
+    padding-right: 10px;
+    content:"\2740";
+}
+.footer-contact-item-bottom a:hover {
+    color: #fff;
 }
 .message {
 
