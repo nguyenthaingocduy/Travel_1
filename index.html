@@ -24,14 +24,38 @@
                 <li style="--x:6"><a href="">Lien he</a></li>
             </ul>
         </div>
-        <div class="message">
+        <!-- <div class="message">
             <i class='bx bxl-messenger'></i>
             <ul>
-                <li style="--x:1;"><a href="#">Facebook</a>e</li>
-                <li style="--x:2;"><a href="#">Zalo</a>e</li>
-                <li style="--x:3;"><a href="#">Phone</a>e</li>
+                <li style="--x:1;"><a href="#">Facebook</a></li>
+                <li style="--x:2;"><a href="#">Zalo</a></li>
+                <li style="--x:3;"><a href="#">Phone</a></li>
             </ul>
+        </div> -->
+        <div class="contact-us-button" onclick="toggleContactOptions()">
+            <div class="notification-dot"></div>
         </div>
+        <div class="overlay" id="overlay" onclick="toggleContactOptions()"></div>
+        <div class="contact-options" id="contact-options">
+            <a href="tel:123456789" class="contact-option">
+                <img src="https://img.icons8.com/ios-filled/50/FF0000/phone.png" alt="Hotline">
+                <span>Hotline</span>
+            </a>
+            <a href="viber://chat?number=123456789" class="contact-option">
+                <img src="https://img.icons8.com/color/48/000000/viber.png" alt="Viber">
+                <span>Viber</span>
+            </a>
+            <a href="https://zalo.me/123456789" class="contact-option">
+                <img src="https://img.icons8.com/color/48/000000/zalo.png" alt="Zalo">
+                <span>Zalo</span>
+            </a>
+            <a href="https://facebook.com" class="contact-option">
+                <img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook">
+                <span>Facebook</span>
+            </a>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------- -->
         <div class="video-container">
             <video src="video/video1.mp4" autoplay muted loop></video>
         </div>
@@ -348,7 +372,16 @@
 </div>
 
 
+<!-- /* script-message-icon */ -->
 
+<script>
+ function toggleContactOptions() {
+            var options = document.getElementById('contact-options');
+            var overlay = document.getElementById('overlay');
+            options.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+</script>
 
 
 
