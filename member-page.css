@@ -1,0 +1,939 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --subtext: 'Roboto' , sans-serif;
+}
+body {
+    font-family: var(--subtext);
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(45deg, #ff6f69, #ffcc5c);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* message-icon */
+
+.contact-us-button {
+    position: fixed;
+    bottom: 20px;
+   left: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--main-color); /* Màu xanh lá */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(193, 48, 48);
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 10px;
+    animation: pulse 1.5s infinite;
+    z-index: 1000;
+}
+
+.contact-us-button::before {
+    content: '\260E'; /* Icon tài liệu */
+    font-size: 20px;
+    display: block;
+    margin-bottom: -25px;
+    position: absolute;
+    line-height: 50px;
+}
+
+.contact-us-button::after {
+    content: 'Contact us';
+    display: block;
+    margin-top: -20px;
+    line-height: normal;
+    font-size: 12px;
+}
+
+.contact-us-button .notification-dot {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: red; /* Màu do */
+    border-radius: 50%;
+}
+
+.contact-options {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    left: 20px;
+    background-color: rgb(243, 236, 241);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1001;
+    text-decoration: none;
+
+}
+
+.contact-options.show {
+    display: block;
+    
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #7295b0;
+}
+
+.contact-option:last-child {
+    border-bottom: none;
+}
+
+.contact-option img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.contact-options a {
+    text-decoration: none;
+   
+}
+
+.contact-option span {
+    font-size: 16px;
+    transition: all .2s ease;
+    text-decoration: none;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.contact-us-button:hover {
+    animation: shake 0.5s;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.overlay.show {
+    display: block;
+}
+/* Animation for banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    opacity: 0.8;
+    transition: opacity 1s ease;
+}
+.highlight-section {
+    background-color: #e0f7fa;
+    /* padding: 2rem 0; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.details-grid {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+section h2 {
+    text-align: center;
+    font-family: var();
+}
+.detail-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 1rem;
+    flex: 1;
+}
+.detail-item i {
+    font-size: 30px;
+    margin: 10px;
+}
+.detail-item h3 {
+    margin: 0;
+}
+.detail-item p {
+    margin: 10px;
+
+
+}
+.detail-item h3 {
+    color: #ff6f69;
+    font-size: 1.5rem;
+}
+
+.detail-item p {
+    font-size: 1.2rem;
+}
+/* form-sigh up */
+
+.form-signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa;
+    width: 100%;
+    height: 100%;
+}
+/* (previous CSS code) */
+
+.form-popup {
+    display: none; /* Hide the form by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* (rest of your CSS code) */
+.open-button {
+    padding: 15px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.open-button:hover {
+    background-color: #0056b3;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 400px;
+    background-color: white;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-container input[type=text], 
+.form-container input[type=tel], 
+.form-container select, 
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.9;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+
+.form-container .btn:hover {
+    opacity: 1;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem 0;
+}
+
+.slide {
+    display: none;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slide-controls .prev, .slide-controls .next {
+    cursor: pointer;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+section {
+    padding: 2rem 0;
+    margin: 1rem 0;
+    background: #fff;
+    box-shadow: 0
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+section#overview {
+    text-align: center;
+}
+
+section#overview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+/* schedule ------------------------------------------- */
+section#schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container-schedule {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.image-gallery {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#prev-btn {
+    left: 10px;
+}
+
+#next-btn {
+    right: 10px;
+}
+
+.trip-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.trip-info h2, .trip-info h3 {
+    margin-top: 0;
+}
+
+.activities {
+    display: flex;
+    gap: 10px;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity img {
+    width: 40px;
+    height: 40px;
+}
+
+.difficulty {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.level {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.easy {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.hard {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#schedule-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+#book-tour-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+/* -------------------------------------------- */
+
+
+/* elementor----------------------------------- */
+
+
+.tabs-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 50px 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-link {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-link:hover,
+.tab-link.active {
+    background-color: #0073e6;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------- */
+/* Trekking---------------------------------------------- */
+.tour-trekking {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.tour-trekking h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tour-trekking h2 {
+    font-size: 1.8em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-content {
+    padding: 20px 0;
+}
+
+.carousel-content h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.carousel-content p {
+    font-size: 1em;
+    color: #777;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #e67e22;
+    margin: 15px 0;
+    font-weight: bold;
+    background-color: #fbe9e7;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.book-tour {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.book-tour:hover {
+    background-color: #d35400;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.booking-form {
+    display: none; /* Ẩn form ban đầu */
+    margin-top: 20px;
+}
+
+.booking-form input, .booking-form button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking-form button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.booking-form .close-form {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+/* --------------------------------------------------------- */
+section#gallery .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+section#contact form {
+    display: grid;
+    gap: 10px;
+}
+
+section#contact form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+section#contact form input,
+section#contact form textarea,
+section#contact form button {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+section#contact form button {
+    background-color: #ff6f69;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+section#contact form button:hover {
+    background-color: #e74c3c;
+}
+
+footer {
+    padding: 50px 10px 50px 30px;
+    background-color: #b6dcec;
+
+}
+.footer-content-middle {
+    
+}
+.footer-content-item h1 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: var(--subtext);
+}
+
+
+.footer-contact-item {
+    display: inline-flex;
+}
+.footer-contact-item i {
+    padding-right: 12px;
+    margin-bottom: 15px;
+}
+.footer-content-left {
+    width: 30%;
+}
+.footer-content-middle {
+    width: 30%;
+}
+.footer-content-right {
+    width: 30%;
+}
+.horizontal{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #dddd;
+    margin-bottom: 20px;
+}
+.footer-contact-item-bottom a {
+    text-decoration: none;
+    color: #000;
+    transition: all .3s ease;;
+}
+.footer-contact-item-bottom a::before {
+    padding-right: 10px;
+    content:"\2740";
+}
+.footer-contact-item-bottom a:hover {
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .banner-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .detail-item {
+        flex: 1 1 45%;
+        margin: 0.5rem;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+    }
+    /* elementor */
+    .tabs-container {
+        width: 95%;
+    }
+
+    .tabs {
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .tab-link {
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+}
